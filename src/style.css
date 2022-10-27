@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+:root {
+    --main-color: #242635;
+    --secondary-color: #34B0BE;
+    --third-color: #d1ceca;
+    
+    --mobile-title-font-size: 50px;
+    --mobile-title-font-weight: 600;
+    --mobile-subtitle-font-size: 32px;
+    --mobile-subtitle-font-weight: 600;
+    --mobile-subsection-font-size: 18px;
+    --mobile-subsection-font-weight: 300;
+    --mobile-body-font-size: 16px;
+    --mobile-body-font-weight: 300;
+
+    --desktop-title-font-size: 80px;
+    --desktop-title-font-weight: 600;
+    --desktop-subtitle-font-size: 50px;
+    --desktop-subtitle-font-weight: 600;
+    --desktop-body-font-size: 18px;
+    --desktop-body-font-weight: 300;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    background-color: var(--main-color);
+    font-size: var(--mobile-body-font-size);
+    font-weight: var(--mobile-body-font-weight);
+}
+.main-container, .navbar, .navbar ul, .navbar ul li {
+    display: flex;
+    flex-direction: column;
+}
+.main-container {
+    /* display: flex;
+    flex-direction: column;   */  
+    height: 100vh;
+    color: var(--third-color);
+    padding: 1rem;
+}
+.navbar {
+    width: 100%;
+    height: 60px;
+    align-items: flex-end;
+    position: fixed;
+    right: 0;
+    z-index: 100;
+}
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48;
+    padding: 1rem;    
+    padding-right: 1.5rem;
+}
+.menu {
+    list-style: none;
+    width: 100%;
+    height: calc(2rem * 6);
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #aaa;
+    position: relative;
+    z-index: 100;
+    left: 100%;
+    transition: all 300ms;
+}
+.navbar:hover > .menu {
+    left: 0;
+}
+.menu-item {
+    justify-content: center;
+    width: 100%;
+    height: 2rem;
+    padding: 0 1.5rem; 
+    font-size: 0.8rem;  
+    text-align: center;
+    cursor: pointer;
+}
+.menu-item a {
+    text-decoration: none;
+    color: var(--main-color);
+}
+.menu-item a:visited {
+    color: var(--main-color);
+}
+/*====== My self container =====*/
+.myself-container {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* .user-image {
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    background-image: url(./assets/Vectores/Ellipse\ 14.svg);
+    background-size: cover;
+} */
+.user-image {
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    border-radius: 50%;
+    background-color: #323341;
+}
+.user-image > img {
+    position: relative;
+    top: -0.5rem;
+}
+.img-mobile {
+    display: block;
+}
+.img-desktop {
+    display: none;
+}
+.data {
+    font-size: var(--mobile-subsection-font-size);
+    font-weight: var(--mobile-subsection-font-weight);
+    margin-top: 1.5rem;
+}
+.myself-container h1 {
+    font-size: var(--mobile-title-font-size);
+    font-weight: var(--mobile-title-font-weight);
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+.myself-container > hr {
+    width: 80%;
+    height: 3px;
+    background-color: var(--third-color);
+    margin-bottom: 0.8rem;
+}
+.position {
+    margin-bottom: 2rem;
+}
+.years {
+    color: var(--secondary-color);
+    font-weight: var(--mobile-subtitle-font-weight);
+}
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.circle {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: var(--third-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circle > img {
+    width: 60%;
+    height: 60%;
+}
+.main-projects {
+    background-color: #323341;
+    border-radius: 0.7rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+.project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--third-color);
+    border-radius: 0.7rem;
+    width: 5rem;
+    height: 3rem;
+}
+.project img {
+    width: 60%;
+    height: 75%;
+}
+/*=========== About me ==========*/
+.title {
+    color: var(--secondary-color);
+    font-size: var(--mobile-subtitle-font-size);
+    font-weight: var(--mobile-subtitle-font-weight);
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+}
+.about > p {
+    text-align: center;
+    line-height: 1.5rem;
+}
+/*========= Services ==========*/
