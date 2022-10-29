@@ -362,6 +362,7 @@ footer {
     }
     .navbar, .navbar ul {
         flex-direction: row;
+        padding-right: 1rem;
     }
     .menu {
         transform: translateX(0);
