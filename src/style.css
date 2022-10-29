@@ -39,6 +39,8 @@ body {
     height: 100vh;
     color: var(--third-color);
     padding: 1rem;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 .navbar {
     width: 100%;
@@ -275,6 +277,7 @@ body {
     height: 0.9rem;
     background-color: #fff;
     border-radius: 0.45rem;
+    position: relative;
 }
 .skill-bar1::after, .skill-bar2::after, .skill-bar3::after {
     content: "";
