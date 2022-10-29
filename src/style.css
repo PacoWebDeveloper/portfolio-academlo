@@ -48,6 +48,7 @@ body {
     align-items: flex-end;
     position: fixed;
     right: 0;
+    top: 0;
     z-index: 100;
 }
 .menu-icon {
@@ -354,4 +355,26 @@ footer {
 }
 .creator {
     font-weight: 400;
+}
+@media (min-width: 900px) {
+    .show {
+        display: none;
+    }
+    .navbar, .navbar ul {
+        flex-direction: row;
+    }
+    .menu {
+        transform: translateX(0);
+        background-color: transparent;
+        height: 50px;
+    }
+    .menu-item {
+        width: auto;        
+    }
+    .menu-item a, .menu-item a:visited {
+        color: #fff;
+    }
+    .menu-item:hover a {
+        color: var(--secondary-color);
+    }
 }
