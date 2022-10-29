@@ -35,9 +35,7 @@ body {
     display: flex;
     flex-direction: column;
 }
-.main-container {
-    /* display: flex;
-    flex-direction: column;   */  
+.main-container { 
     height: 100vh;
     color: var(--third-color);
     padding: 1rem;
@@ -72,9 +70,6 @@ body {
     justify-content: flex-end;
     align-items: center;
     background-color: #aaa;
-    /* position: relative;
-    z-index: 100;
-    left: 100%; */
     transform: translateX(100%);
     transition: transform 300ms;
 }
@@ -237,7 +232,7 @@ body {
     font-weight: var(--mobile-subtitle-font-weight);
 }
 .card-description {
-    color: #aaa;
+    color: #777;
     text-align: center;
     font-size: 0.9rem;
 }
@@ -302,15 +297,36 @@ body {
 .portfolio {
     display: flex;
     flex-direction: column;
-    margin-top: 4rem;
-    gap: 2rem;
 }
-.portfolio > h2 {
-    color: var(--secondary-color);
-    font-size: var(--mobile-subtitle-font-size);
-    font-weight: var(--mobile-subtitle-font-weight);
-    text-align: center;
+.project-container {
+    height: 200px;
 }
 .project-card img {
+    width: 100%;
+}
+/* ========== Contact ============= */
+.contact ,.contact-container, .contact-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact-container {
+    gap: 3rem;
+}
+.contact-card {
+    justify-content: center;
+    gap: 1.5rem;
+    background-image: url("assets/Vectores/Ellipse\ 14.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    width: 200px;
+    height: 200px;
+    border-radius: 0.3rem;
+}
+.contact-icon {
+    width: 35%;
+}
+.contact-icon > img {
     width: 100%;
 }
