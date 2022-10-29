@@ -223,12 +223,79 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 1.5rem;
     background-color: #fff;
     border-radius: 0.3rem;
     background-image: url(./assets/Vectores/Ellipse\ 14.svg);
     background-size: contain;
     background-repeat: no-repeat;
+    padding: 0.5rem;
+}
+.card-title {
+    color: #000;
+    font-size: var(--mobile-subsection-font-size);
+    font-weight: var(--mobile-subtitle-font-weight);
+}
+.card-description {
+    color: #aaa;
+    text-align: center;
+    font-size: 0.9rem;
 }
 .swiper-slide {
     width: 80%;
 }
+/* ============= Skills ==================*/
+.skills, .skill-container, .skill-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.skills {
+    margin-top: 4rem;
+    gap: 1rem;
+}
+.skills > h2 {
+    color: var(--secondary-color);
+    font-size: var(--mobile-subtitle-font-size);
+    font-weight: var(--mobile-subtitle-font-weight);
+}
+.skill-container {
+    gap: 0.5rem;
+}
+.skill-data {
+    flex-direction: row;
+    justify-content: space-between;
+}
+.skill-data > h3 {
+    font-size: var(--mobile-body-font-size);
+    font-weight: var(--mobile-subtitle-font-weight);
+}
+.skill-percentage {
+    color: var(--secondary-color);
+    font-size: 0.8rem;
+}
+.skill-bar1, .skill-bar2, .skill-bar3 {
+    width: 100%;
+    height: 0.9rem;
+    background-color: #fff;
+    border-radius: 0.45rem;
+}
+.skill-bar1::after, .skill-bar2::after, .skill-bar3::after {
+    content: "";
+    position: absolute;
+    height: 0.9rem;
+    background-color: var(--secondary-color);
+    border-radius: 0.45rem;
+}
+.skill-bar1::after {
+    width: calc(70% - 2rem);
+}
+.skill-bar2::after {
+    width: calc(95% - 2rem);
+}
+.skill-bar3::after {
+    width: calc(80% - 2rem);
+}
+
+/* =========== PORTFOLIO =========== */
