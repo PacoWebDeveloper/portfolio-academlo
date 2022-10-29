@@ -207,7 +207,7 @@ body {
     flex-direction: column;
 
 }
-.card-container {
+.card-container, .project-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -299,3 +299,18 @@ body {
 }
 
 /* =========== PORTFOLIO =========== */
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    gap: 2rem;
+}
+.portfolio > h2 {
+    color: var(--secondary-color);
+    font-size: var(--mobile-subtitle-font-size);
+    font-weight: var(--mobile-subtitle-font-weight);
+    text-align: center;
+}
+.project-card img {
+    width: 100%;
+}
