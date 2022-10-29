@@ -32,5 +32,6 @@ window.addEventListener('load', () => {
           el: ".swiper-pagination",
           clickable: true,
         },
-      });
+        initialSlide: 1
+    });
 })

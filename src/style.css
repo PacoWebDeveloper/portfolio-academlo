@@ -468,6 +468,10 @@ footer {
         max-width: 800px;
         margin: 0 auto;
     }
+    /* ============= Services ========= */
+    .mySwiper {
+        max-width: 351px;
+    }
     /* ============= Skills =========== */
     .skills {
         max-width: 800px;
