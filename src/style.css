@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
 :root {
-    --main-color: #242635;
+    --main-color: #03051c;
     --secondary-color: #34B0BE;
     --third-color: #d1ceca;
     
@@ -357,6 +357,18 @@ footer {
     font-weight: 400;
 }
 @media (min-width: 900px) {
+    body {
+        background-color: var(--main-color);
+        font-size: var(--desktop-body-font-size);
+        font-weight: var(--desktop-body-font-weight);
+    }
+    .main-container {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+    .main-container::-webkit-scrollbar {
+        display: none;
+    }
     .show {
         display: none;
     }
@@ -367,15 +379,104 @@ footer {
     .menu {
         transform: translateX(0);
         background-color: transparent;
-        height: 50px;
+        height: 60px;
     }
     .menu-item {
         width: auto;        
     }
     .menu-item a, .menu-item a:visited {
         color: #fff;
+        font-size: 1rem;
     }
     .menu-item:hover a {
         color: var(--secondary-color);
+        font-weight: 700;
+    }
+    /* =========== Myself container ======= */
+    .myself-container {
+        margin-top: 50px;
+        align-items: flex-start;
+        justify-content: center;
+        position: relative;
+        padding-left: 2rem;
+    }
+    .user-image {
+        align-self: center;
+        width: 600px;
+        height: 600px;
+    }
+    .user-image > img {
+        top: -1.6rem;
+    }
+    .img-mobile {
+        display: none;
+    }
+    .img-desktop {
+        display: block;
+    }
+    .data {
+        font-size: var(--desktop-subtitle-font-size);
+        font-weight: var(--desktop-subtitle-font-weight);
+        position: absolute;
+        top: 0;
+    }
+    .myself-container h1 {
+        font-size: var(--desktop-title-font-size);
+        font-weight: var(--desktop-title-font-weight);
+        color: var(--secondary-color);
+        margin-bottom: 0.5rem;
+        position: absolute;
+        top: 5rem;
+    }
+    .myself-container > hr {
+        width: 25%;
+        height: 3px;
+        background-color: var(--third-color);
+        margin-bottom: 0.8rem;
+        position: absolute;
+        top: 5.5rem
+    }
+    .position {
+        position: absolute;
+        top: 13rem;
+        max-width: 190px;
+    }
+    .experience {
+        position: absolute;
+        top: 20rem;
+    }
+    .social {
+        position: absolute;
+        top: 22rem;
+        padding: 1rem 0;
+    }
+    .circle {
+        width: 3rem;
+        height: 3rem;
+    }
+    .main-projects {
+        height: 12rem;
+        align-items: center;
+        gap: 3rem;
+    }
+    .project {
+        width: calc((100% / 5));
+        height: 80%;
+    }
+    /* ============== about =========== */
+    .about {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    /* ============= Skills =========== */
+    .skills {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    /* ============= Contact ========== */
+    .contact-container {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10rem;
     }
 }
