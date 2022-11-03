@@ -11,8 +11,11 @@ window.addEventListener("load", () => {
     openCloseMenu();
   });
   menutItem.forEach((item) => {
+
     item.addEventListener("click", () => {
       openCloseMenu();
+      if(item.classList.contains('active'))
+        item.classList
     });
   });
 
@@ -35,26 +38,21 @@ window.addEventListener("load", () => {
   });
 
   // ========= Menu active ===========
-  if (getWindowWidth() >= 900) {
-    let lastSelectedItem = null;
-    if (lastSelectedItem === null) {
-      menutItem[0].classList.add("active");
-      lastSelectedItem = menutItem[0].children[0].text;
-    }
-    menutItem.forEach((item) => {
-      item.addEventListener("click", () => {
-        menutItem.forEach((element) => {
-          if (element.children[0].text === lastSelectedItem)
-            element.classList.toggle("active");
-        });
-        item.classList.toggle("active");
-        lastSelectedItem = item.children[0].text;
+  let lastSelectedItem = null;
+  if (lastSelectedItem === null) {
+    menutItem[0].classList.add("active");
+    lastSelectedItem = menutItem[0].children[0].text;
+  }
+  menutItem.forEach((item) => {
+    item.addEventListener("click", () => {
+      menutItem.forEach((element) => {
+        if (element.children[0].text === lastSelectedItem)
+          element.classList.toggle("active");
       });
+      item.classList.toggle("active");
+      lastSelectedItem = item.children[0].text;
     });
-  }
-  function getWindowWidth() {
-    return window.innerWidth;
-  }
+  });
 
   // ================ ScrollReveal ============
   ScrollReveal().reveal(".main-container", { delay: 300 });
