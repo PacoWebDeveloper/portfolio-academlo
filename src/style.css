@@ -26,6 +26,17 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
+html {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+/* .html::-webkit-scrollbar {
+    width: 0.5rem;
+    background-color: #777;
+}
+.html::-webkit-scrollbar-thumb {
+    background-color: #000;
+} */
 body {
     background-color: var(--main-color);
     font-size: var(--mobile-body-font-size);
@@ -36,19 +47,20 @@ body {
     flex-direction: column;
 }
 .main-container { 
+    min-width: 350px;
     height: 100vh;
     color: var(--third-color);
     padding: 1rem;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
+    /* overflow-y: scroll;
+    scroll-behavior: smooth; */
 }
-.main-container::-webkit-scrollbar {
+/* .main-container::-webkit-scrollbar {
     width: 0.5rem;
     background-color: #777;
 }
 .main-container::-webkit-scrollbar-thumb {
     background-color: #000;
-}
+} */
 .navbar {
     width: 100%;
     height: 50px;
@@ -58,6 +70,9 @@ body {
     top: 0;
     z-index: 100;
     background-color: var(--main-color);
+}
+.navbar-shadow {
+    box-shadow: 0 0 5px var(--secondary-color);
 }
 .menu-icon {
     display: none;
@@ -315,13 +330,13 @@ body {
     border-radius: 0.45rem;
 }
 .skill-bar1::after {
-    width: calc(70% - 2rem);
+    width: calc(70% - 1rem);
 }
 .skill-bar2::after {
-    width: calc(60% - 2rem);
+    width: calc(60% - 1rem);
 }
 .skill-bar3::after {
-    width: calc(10% - 2rem);
+    width: calc(10% - 1rem);
 }
 
 /* =========== PORTFOLIO =========== */

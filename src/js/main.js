@@ -1,4 +1,5 @@
 window.addEventListener("load", () => {
+  const navbar = document.querySelector('.navbar');
   const menu = document.querySelector(".menu");
   const showMenuButton = document.querySelector("#menu");
   const closeMenuButton = document.querySelector("#close");
@@ -18,6 +19,11 @@ window.addEventListener("load", () => {
         item.classList
     });
   });
+  window.addEventListener('scroll', () => {
+    if (window.scrollY === 0)
+      navbar.classList.remove('navbar-shadow');
+    else navbar.classList.add('navbar-shadow')
+  })
 
   function openCloseMenu() {
     showMenuButton.classList.toggle("show");
@@ -56,7 +62,9 @@ window.addEventListener("load", () => {
 
   // ================ ScrollReveal ============
   ScrollReveal().reveal(".main-container", { delay: 300 });
-  ScrollReveal().reveal(".main-projects", { delay: 600 });
+  ScrollReveal().reveal(".user-image", { delay: 1500, interval: 300});
+  ScrollReveal().reveal(".main-projects", { delay: 300 });
   ScrollReveal().reveal(".menu-item", { delay: 500, interval: 150});
-  ScrollReveal().reveal(".project", { delay: 1000, interval: 200});
+  ScrollReveal().reveal(".project", { delay: 700, interval: 200});
+  ScrollReveal().reveal(".circle", { delay: 1000, interval: 200});
 });
