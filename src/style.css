@@ -144,9 +144,9 @@ body {
 .img-mobile {
     display: block;
 }
-/* .img-desktop {
+.img-desktop {
     display: none;
-} */
+}
 .data {
     font-size: var(--mobile-subsection-font-size);
     font-weight: var(--mobile-subsection-font-weight);
@@ -459,9 +459,9 @@ footer {
         width: 100%;
         height: 100%;
     }
-    /* .img-mobile {
+    .img-mobile {
         display: none;
-    } */
+    }
     .img-desktop {
         display: block;
     }
