@@ -202,6 +202,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: transform 300ms ease;
+}
+.circle:hover {
+    transform: scale(1.2);
 }
 .circle > img {
     width: 60%;
@@ -219,14 +223,39 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     background-color: var(--third-color);
     border-radius: 0.7rem;
     width: 5rem;
     height: 3rem;
+    position: relative;
+    transition: transform 500ms;
+}
+.project:hover {
+    transform: scale(1.2);
 }
 .project img {
     width: 60%;
     height: 75%;
+}
+.project > p {
+    font-size: 0.5rem;
+    color: var(--main-color);
+}
+.proyect-date {
+    position: absolute;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    font-size: 0.7rem;
+    padding: 5px;
+    border: 1px solid #323341;
+    box-shadow: inset 0 0 3px #323341;
+    opacity: 0;
+    transition: transform 300ms ease, opacity 300ms ease;
+}
+.project:hover .proyect-date {
+    transform: translateY(55px);
+    opacity: 1;
 }
 /*=========== About me ==========*/
 .title {
@@ -245,7 +274,6 @@ body {
 .services {
     display: flex;
     flex-direction: column;
-
 }
 .card-container, .project-container {
     display: flex;
@@ -271,6 +299,9 @@ body {
     background-repeat: no-repeat;
     padding: 0.5rem;
 }
+.card-icon-img {
+    width: 100px;
+}
 .card-title {
     color: #000;
     font-size: var(--mobile-subsection-font-size);
@@ -280,6 +311,16 @@ body {
     color: #777;
     text-align: center;
     font-size: 0.9rem;
+}
+.card-link > a {
+    color: var(--main-color);
+    font-weight: 500;
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 300ms;
+}
+.service-card:hover a {
+    opacity: 1;
 }
 .swiper-slide {
     width: 80%;
@@ -330,13 +371,13 @@ body {
     border-radius: 0.45rem;
 }
 .skill-bar1::after {
-    width: calc(70% - 1rem);
+    width: calc(85% - 1rem);
 }
 .skill-bar2::after {
     width: calc(60% - 1rem);
 }
 .skill-bar3::after {
-    width: calc(10% - 1rem);
+    width: calc(70% - 1rem);
 }
 
 /* =========== PORTFOLIO =========== */
@@ -528,6 +569,13 @@ footer {
     .project {
         width: calc((100% / 5));
         height: 80%;
+    }
+    .project > p {
+        font-size: 0.8rem;
+    }
+    .project:hover .proyect-date {
+        transform: translateY(70px);
+        opacity: 1;
     }
     /* ============== about =========== */
     .about {

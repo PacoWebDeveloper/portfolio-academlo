@@ -14,15 +14,13 @@ window.addEventListener("load", () => {
   menutItem.forEach((item) => {
 
     item.addEventListener("click", () => {
-      openCloseMenu();
-      if(item.classList.contains('active'))
-        item.classList
+      openCloseMenu();      
     });
   });
   window.addEventListener('scroll', () => {
     if (window.scrollY === 0)
       navbar.classList.remove('navbar-shadow');
-    else navbar.classList.add('navbar-shadow')
+    else navbar.classList.add('navbar-shadow');
   })
 
   function openCloseMenu() {
@@ -64,7 +62,7 @@ window.addEventListener("load", () => {
   ScrollReveal().reveal(".main-container", { delay: 300 });
   ScrollReveal().reveal(".user-image", { delay: 1500, interval: 300});
   ScrollReveal().reveal(".main-projects", { delay: 300 });
-  ScrollReveal().reveal(".menu-item", { delay: 500, interval: 150});
+  ScrollReveal().reveal(".menu-item", { delay: 500, interval: 350});
   ScrollReveal().reveal(".project", { delay: 700, interval: 200});
   ScrollReveal().reveal(".circle", { delay: 1000, interval: 200});
 });
